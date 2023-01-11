@@ -1,5 +1,4 @@
 #!/usr/bin/python3
-# Auth Sangwani P Zyambo
 
 """ This module defines a class based on 6-base_geometry.py ."""
 
