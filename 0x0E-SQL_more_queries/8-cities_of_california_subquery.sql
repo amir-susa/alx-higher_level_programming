@@ -1,3 +1,5 @@
--- count and display number of records where id=89
--- in first_table
-SELECT COUNT(id) FROM first_table WHERE id = 89;
+-- Lists all the cities of California that can be found
+-- in the database hbtn_0d_usa.
+SELECT `id`, `name` FROM `cities` WHERE `state_id`
+	IN (SELECT `id` FROM `states` WHERE `name` = "California")
+	ORDER BY `id`;

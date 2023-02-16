@@ -1,6 +1,5 @@
--- lists all rows of the table second_table
--- from the database hbtn_0c_0
--- results display score and name
--- ordered by score
--- with score >= 10
-SELECT score, name FROM second_table WHERE score >= 10 ORDER BY score DESC;
+-- Lists all shows contained in the database hbtn_0d_tvshows.
+SELECT `tv_shows`.`title`, `tv_show_genres`.`genre_id`
+	FROM `tv_shows` LEFT JOIN `tv_show_genres`
+	ON `tv_shows`.`id` = `tv_show_genres`.`show_id`
+	ORDER BY `tv_shows`.`title` ASC, `tv_show_genres`.`genre_id` ASC;

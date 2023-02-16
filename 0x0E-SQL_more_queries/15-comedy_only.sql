@@ -1,8 +1,7 @@
--- Lists the number of records with the same score
--- in the table `second_table` of the database `hbtn_0c_0`
--- in MySQL Server.
-
-SELECT score, COUNT('score') as number
-FROM second_table
-GROUP BY score
-ORDER BY score DESC;
+-- Lists all Comedy shows in the database hbtn_0d_tvshows.
+SELECT `title` FROM `tv_shows`
+	LEFT JOIN `tv_show_genres` ON `tv_shows`.`id` = `tv_show_genres`.`show_id`
+	LEFT JOIN `tv_genres` ON `tv_show_genres`.`genre_id` = `tv_genres`.`id`
+	WHERE `tv_genres`.`name` = 'Comedy'
+	GROUP BY `title`
+	ORDER BY `title` ASC;
